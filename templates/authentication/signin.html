@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signin page</title>
+</head>
+{% load static %}
+<img src="{% static 'css/index.css' %}">
+<body style="background-image:url('{% static 'images/img.jpg' %}'); background-repeat: no-repeat; background-size: 100%;">
+    <h3><center>Sign In</center></h3>
+    <center><form action="/signin" method="post">
+        {% csrf_token %}
+       <label for="">username</label>
+        <input type="text" id="username" name="username" placeholder="Enter a username" required>
+        <br><br>
+
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter a password" required>
+        <br><br>
+
+
+        <button type="submit">Sign In</button>
+    </form></center>
+
+
+</body>
+</html>
